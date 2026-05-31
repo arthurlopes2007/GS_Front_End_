@@ -178,4 +178,42 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    /* =========================
+        MODAL CAMPANHAS SUSTENTÁVEIS
+    ========================= */
+
+    const botoesParticipar = document.querySelectorAll(".btn-submit");
+    const botaoFechar = document.querySelector(".close-modal");
+    const modal = document.querySelector(".modal");
+
+    // Verifica se os elementos do modal existem na página atual antes de rodar
+    if (modal && botaoFechar && botoesParticipar.length > 0) {
+
+        // Função para abrir o modal mudando o display via JavaScript
+        const abrirModal = () => {
+            modal.style.display = "flex";
+        };
+
+        // Função para fechar o modal voltando ao display original (escondido)
+        const fecharModal = () => {
+            modal.style.display = "none";
+        };
+
+        // Adiciona o evento de clique em todos os botões "Participar" da página
+        botoesParticipar.forEach(botao => {
+            botao.addEventListener("click", abrirModal);
+        });
+
+        // Adiciona o evento de clique no botão "Fechar" de dentro do modal
+        botaoFechar.addEventListener("click", fecharModal);
+
+        // Fecha o modal caso o usuário clique na parte escura (fora do card do modal)
+        modal.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                fecharModal();
+            }
+        });
+
+    }
+
 });
