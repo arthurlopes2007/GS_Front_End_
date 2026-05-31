@@ -109,5 +109,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
             }
 
+    /* =========================
+        VALIDAÇÃO E-MAIL
+    ========================= */
+
+            const emailRegex =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email.value.trim())) {
+
+                document
+                    .getElementById("emailError")
+                    .style.display = "block";
+
+                isFormValid = false;
+
+            } else {
+
+                document
+                    .getElementById("emailError")
+                    .style.display = "none";
+
+            }
+
 
 });
