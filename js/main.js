@@ -89,5 +89,25 @@ document.addEventListener("DOMContentLoaded", () => {
             const formSuccess =
                 document.getElementById("formSuccess");
 
+    /* =========================
+        VALIDAÇÃO NOME
+    ========================= */
+
+            if (name.value.trim() === "") {
+
+                document
+                    .getElementById("nameError")
+                    .style.display = "block";
+
+                isFormValid = false;
+
+            } else {
+
+                document
+                    .getElementById("nameError")
+                    .style.display = "none";
+
+            }
+
 
 });
