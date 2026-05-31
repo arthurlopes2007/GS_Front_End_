@@ -62,6 +62,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    
+    /* =========================
+       VALIDAÇÃO FORMULÁRIO
+    ========================= */
+
+    const contactForm =
+        document.getElementById("contactForm");
+
+    if (contactForm) {
+
+        contactForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            let isFormValid = true;
+
+            const name =
+                document.getElementById("name");
+
+            const email =
+                document.getElementById("email");
+
+            const message =
+                document.getElementById("message");
+
+            const formSuccess =
+                document.getElementById("formSuccess");
+
 
 });
