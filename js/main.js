@@ -153,4 +153,29 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
 
+    /* =========================
+        FORMULÁRIO VÁLIDO
+    ========================= */
+
+            if (isFormValid) {
+
+                formSuccess.style.display = "block";
+
+                // Limpa os campos
+                contactForm.reset();
+
+                // Remove mensagem após 4 segundos
+                setTimeout(() => {
+
+                    formSuccess.style.display = "none";
+
+                }, 4000);
+
+            }
+
+        });
+
+    }
+
+
 });
