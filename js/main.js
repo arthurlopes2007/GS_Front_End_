@@ -132,5 +132,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
             }
 
+    /* =========================
+        VALIDAÇÃO MENSAGEM
+    ========================= */
+
+            if (message.value.trim() === "") {
+
+                document
+                    .getElementById("messageError")
+                    .style.display = "block";
+
+                isFormValid = false;
+
+            } else {
+
+                document
+                    .getElementById("messageError")
+                    .style.display = "none";
+
+            }
+
 
 });
