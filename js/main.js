@@ -22,6 +22,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+/* =========================
+       ACCORDION FAQ
+    ========================= */
+
+    const accordionHeaders =
+        document.querySelectorAll(".accordion-header");
+
+    accordionHeaders.forEach(header => {
+
+        header.addEventListener("click", function () {
+
+            const content = this.nextElementSibling;
+
+            // Fecha os outros accordions
+            document
+                .querySelectorAll(".accordion-content")
+                .forEach(item => {
+
+                    if (item !== content) {
+                        item.style.maxHeight = null;
+                    }
+
+                });
+
+            // Alterna abertura
+            if (content.style.maxHeight) {
+
+                content.style.maxHeight = null;
+
+            } else {
+
+                content.style.maxHeight =
+                    content.scrollHeight + "px";
+
+            }
+
+        });
+
+    });
 
     
+
 });
