@@ -104,3 +104,659 @@ header {
 
     letter-spacing: 1px;
 }
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+
+header nav ul {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    list-style: none;
+}
+
+header nav ul li a {
+    color: #cccccc;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: var(--primary-light);
+}
+
+/* =========================
+   MENU MOBILE
+========================= */
+
+.menu-toggle {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+    background: linear-gradient(
+        135deg,
+        var(--light-bg) 0%,
+        #e8f5e9 100%
+    );
+
+    padding: 5rem 2rem;
+
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 800px;
+
+    margin: 0 auto 30px;
+
+    font-size: 18px;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.btn-primary,
+.btn-submit {
+    display: inline-block;
+
+    background-color: var(--primary);
+    color: rgb(0, 0, 0);
+
+    padding: 14px 24px;
+
+    border: none;
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-submit:hover {
+    background-color: var(--primary-light);
+}
+
+/* =========================
+   GRID LAYOUTS
+========================= */
+
+.grid-container,
+.grid-team,
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+
+    gap: 30px;
+
+    margin-top: 30px;
+}
+
+/* =========================
+   CARDS GERAIS
+========================= */
+
+.card,
+.team-card,
+.dash-card,
+.mission-card {
+    background: rgb(217, 235, 255);
+
+    padding: 25px;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    text-align: center;
+
+    transition: transform 0.3s ease;
+}
+
+.card:hover,
+.team-card:hover,
+.dash-card:hover,
+.mission-card:hover {
+    transform: translateY(-5px);
+}
+
+/* =========================
+   TEAM CARDS
+========================= */
+
+.team-card img {
+    width: 130px;
+    height: 130px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid var(--primary-light);
+
+    margin-bottom: 15px;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    color: var(--primary-light);
+}
+
+/* =========================
+   DASHBOARD ALERTAS
+========================= */
+
+.alert-high {
+    border-left: 6px solid var(--alert-red);
+}
+
+.alert-medium {
+    border-left: 6px solid var(--alert-orange);
+}
+
+.badge-alert {
+    display: inline-block;
+
+    background-color: #ffffff;
+
+    padding: 6px 12px;
+
+    margin: 10px 0;
+
+    border-radius: 4px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.indicator {
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+.action-triggered {
+    margin-top: 10px;
+}
+
+/* =========================
+   MISSÕES
+========================= */
+
+.points {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+
+    color: var(--primary);
+}
+
+/* =========================
+   FORMULÁRIOS
+========================= */
+
+.form-wrapper {
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.error-msg {
+    display: none;
+
+    color: var(--alert-red);
+
+    margin-top: 5px;
+
+    font-size: 13px;
+}
+
+.success-banner {
+    display: none;
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    background-color: #00ec37;
+    color: #000000;
+
+    border-radius: 5px;
+}
+
+/* =========================
+   FAQ / ACCORDION
+========================= */
+
+.accordion-item {
+    overflow: hidden;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+
+    background: white;
+}
+
+.accordion-header {
+    width: 100%;
+
+    padding: 15px;
+
+    background-color: #ffffff;
+
+    border: none;
+
+    text-align: left;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.accordion-content {
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-content p {
+    padding: 15px;
+}
+
+
+.faq-container {
+    max-width: 800px;
+
+    margin: 3rem auto;
+
+    padding: 0 2rem;
+}
+
+.faq-item {
+    padding: 1rem 0;
+
+    border-bottom: 1px solid #dddddd;
+}
+
+.faq-pergunta {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    color: var(--dark);
+}
+
+.faq-pergunta span {
+    font-size: 1.5rem;
+}
+
+.faq-resposta {
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height 0.3s ease-out;
+
+    color: #000000;
+
+    margin-top: 0.5rem;
+}
+
+.faq-resposta.open {
+    max-height: 200px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: var(--dark);
+    color: #ffffff;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+
+        width: 100%;
+
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        background-color: var(--dark);
+    }
+
+    header nav.active {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 20px;
+
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 60px 10px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+}
+
+/* =========================================
+   ESTILOS - PÁGINA DE INTEGRANTES
+========================================= */
+
+.section-title {
+    text-align: center;
+
+    padding: 3rem 2rem 1rem;
+}
+
+.section-title h1 {
+    color: var(--dark);
+
+    font-size: 2.4rem;
+
+    margin-bottom: 1rem;
+}
+
+.section-title p {
+    color: #000000;
+
+    font-size: 1rem;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+/* =========================================
+   GRID EQUIPE
+========================================= */
+
+.grid-equipe {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(240px, 1fr)
+    );
+
+    gap: 2rem;
+
+    max-width: 1200px;
+
+    margin: 3rem auto;
+
+    padding: 0 2rem;
+}
+
+/* =========================================
+   CARD INTEGRANTE
+========================================= */
+
+.card-integrante {
+    background-color: rgb(217, 235, 255);
+
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 12px;
+
+    padding: 2rem 1.5rem;
+
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card-integrante:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+   FOTO PERFIL
+========================================= */
+
+.foto-perfil {
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    margin: 0 auto 1.5rem;
+
+    border: 4px solid var(--primary-light);
+
+    background-color: #dddddd;
+}
+
+/* =========================================
+   TEXTOS
+========================================= */
+
+.card-integrante h2 {
+    color: var(--dark);
+
+    font-size: 1.2rem;
+
+    margin-bottom: 0.7rem;
+}
+
+.rm-text {
+    color: #000000;
+
+    font-size: 14px;
+
+    margin-bottom: 1rem;
+}
+
+/* =========================================
+   LINKS SOCIAIS
+========================================= */
+
+.links-sociais {
+    margin-top: 1rem;
+}
+
+.links-sociais a {
+    display: inline-block;
+
+    margin: 0 0.5rem;
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+.links-sociais a:hover {
+    color: var(--dark);
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .section-title {
+        padding: 2rem 1rem 1rem;
+    }
+
+    .section-title h1 {
+        font-size: 2rem;
+    }
+
+    .grid-equipe {
+        padding: 0 1rem;
+
+        gap: 1.5rem;
+    }
+
+    .card-integrante {
+        padding: 1.8rem 1.2rem;
+    }
+
+    .foto-perfil {
+        width: 110px;
+        height: 110px;
+    }
+
+}
