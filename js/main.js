@@ -217,3 +217,35 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+/* =========================
+    Script de simulação de submissão
+    ========================= */
+     document.getElementById('form-registro-acao')
+            .addEventListener('submit', function (e) {
+
+                e.preventDefault();
+
+                const desc =
+                    document.getElementById('desc-acao')
+                        .value
+                        .trim();
+
+                const msg =
+                    document.getElementById('msg-dashboard');
+
+                if (!desc) {
+
+                    msg.style.color = "red";
+
+                    return;
+                }
+
+                msg.textContent =
+                    "Sucesso! Sua mensagem foi enviada, logo menos entraremos em contato com você!!!";
+
+                msg.style.color = "green";
+
+                this.reset();
+
+            });
