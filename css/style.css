@@ -1,0 +1,106 @@
+/* =========================
+   RESET GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: rgb(5, 76, 143);
+    --primary-light: rgb(255, 255, 255);
+    --dark: rgb(0, 44, 85);
+    --light: #f8f9fa;
+    --alert-red: #d90429;
+    --alert-orange: #f77f00;
+    --text-color: #000000;
+    --shadow: 0 4px 15px rgb(0, 0, 0);
+    --radius: 8px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(159, 190, 219);
+    color: var(--text-color);
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+
+/* =========================
+   LAYOUT PRINCIPAL
+========================= */
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+h1,
+h2,
+h3 {
+    color: rgb(0, 44, 85);
+
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.features-section {
+    max-width: 1200px;
+
+    margin: 4rem auto;
+
+    padding: 0 2rem;
+
+    text-align: center;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background-color: rgb(0, 44, 85);
+    color: rgb(255, 255, 255);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
